@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Simpler Pro";
+  src: url("SimplerProRegular_web/SimplerPro-Regular.woff2") format("woff2"),
+    url("SimplerProRegular_web/SimplerPro-Regular.woff") format("woff");
+  font-weight: 400; /* normal */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Simpler Pro";
+  src: url("SimplerProBlack_web/SimplerPro-Black.woff2") format("woff2"),
+    url("SimplerProBlack_web/SimplerPro-Black.woff") format("woff");
+  font-weight: 900; /* black */
+  font-style: normal;
+}

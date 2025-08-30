@@ -1,0 +1,138 @@
+@use "../base/variables" as *;
+
+.section-hero {
+  &__bg {
+  }
+  &__bg-hand {
+    position: absolute;
+    bottom: 0;
+    left: 45px;
+    width: 456px;
+    height: 600px;
+  }
+  &__bg-hand--mobill {
+    display: none;
+  }
+  &__wrapper {
+    height: 680px;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    padding-right: 120px;
+    background-image: url("../assets/images/hero-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-52%);
+    color: $black-text;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 59px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    max-width: 790px;
+    margin-bottom: 36px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    max-width: 385px;
+  }
+  @media (max-width: 1024px) {
+    &__bg-hand {
+      left: 7px;
+      width: 312px;
+      height: 411px;
+    }
+    &__wrapper {
+      height: 446px;
+      padding-right: 57px;
+      background-position: bottom;
+    }
+
+    &__text-box {
+      transform: translateY(-52%);
+    }
+
+    &__title {
+      margin-bottom: 27px;
+      font-size: 46px;
+    }
+
+    &__subtitle {
+      max-width: 261px;
+      font-size: 20px;
+    }
+  }
+  @media (max-width: $breakpoint-md) {
+    &__bg-hand {
+      width: 234px;
+      height: 308px;
+    }
+    &__wrapper {
+      height: 339px;
+      padding-right: 41px;
+    }
+
+    &__text-box {
+      transform: translateY(-60%);
+    }
+
+    &__title {
+      font-size: 34px;
+      margin-bottom: 21px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 415px) {
+    &__bg-hand {
+      display: none;
+    }
+    &__bg-hand--mobill {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    & .container {
+      max-width: 100%;
+      padding: 0;
+    }
+    &__wrapper {
+      height: 641px;
+      padding-right: 0;
+      padding: 32px 0 0 0;
+      text-align: center;
+      background-image: url("../assets/images/hero-bg-mobill.png");
+    }
+
+    &__text-box {
+      transform: translateY(0);
+      position: static;
+      max-width: 258px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-size: 32px;
+      margin-bottom: 14px;
+    }
+
+    // &__subtitle {
+    //   font-size: 14px;
+    // }
+  }
+}

@@ -1,0 +1,148 @@
+@use "variables" as *;
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Simpler Pro", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  background: #fbf5ff;
+  color: $black-text;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media (max-width: 1024px) {
+    max-width: 904px;
+    padding: 0 20px;
+  }
+  @media (max-width: $breakpoint-md) {
+    max-width: 687px;
+    // padding: 0 20px;
+  }
+  @media (max-width: 415px) {
+    max-width: 315px;
+    padding: 0;
+  }
+}
+
+.title-section {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 110%;
+  text-align: center;
+  color: $black-text;
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+  @media (max-width: $breakpoint-md) {
+    font-size: 29px;
+  }
+  @media (max-width: 415px) {
+    font-size: 28px;
+  }
+}
+
+.section {
+  margin-bottom: 120px;
+  @media (max-width: 1024px) {
+    margin-bottom: 90px;
+  }
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 67px;
+  }
+  @media (max-width: 415px) {
+    margin-bottom: 86px;
+  }
+}
+
+// .button-sticy {
+//   position: fixed;
+//   bottom: 20px;
+//   left: 50%;
+//   backdrop-filter: blur(22.899999618530273px);
+//   background: rgba(138, 49, 239, 0.08);
+//   border-radius: 56px;
+//   padding: 15px;
+//   transform: translateX(-50%);
+//   button {
+//     padding: 16px 31px;
+//     background-color: $violet;
+//     color: #fff;
+//     border-radius: 49px;
+//     box-shadow: 0 9px 24px 0 rgba(138, 49, 239, 0.33);
+//     font-size: 24px;
+//   }
+//   @media (max-width: $breakpoint-md) {
+//     border-radius: 42px;
+//     button {
+//       border-radius: 37px;
+//       padding: 11px 23px;
+//       font-size: 17px;
+//     }
+//   }
+//   @media (max-width: 415px) {
+//     border-radius: 56px;
+//     button {
+//       border-radius: 49px;
+//       padding: 16px 31px;
+//       font-size: 20px;
+//     }
+//   }
+// }
+
+.button-sticy {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  backdrop-filter: blur(22.899999618530273px);
+  background: rgba(138, 49, 239, 0.08);
+  border-radius: 56px;
+  padding: 15px;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+  white-space: nowrap;
+  button {
+    padding: 16px 31px;
+    background-color: $violet;
+    color: #fff;
+    border-radius: 49px;
+    box-shadow: 0 9px 24px 0 rgba(138, 49, 239, 0.33);
+    font-size: 24px;
+  }
+  @media (max-width: $breakpoint-md) {
+    border-radius: 42px;
+    button {
+      border-radius: 37px;
+      padding: 11px 23px;
+      font-size: 17px;
+    }
+  }
+  @media (max-width: 415px) {
+    border-radius: 56px;
+    button {
+      border-radius: 49px;
+      padding: 16px 31px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .button-sticy.active {
+    transform: translateX(-50%) translateY(-120px);
+  }
+}

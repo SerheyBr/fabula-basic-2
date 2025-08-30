@@ -1,0 +1,263 @@
+@use "../base/variables" as *;
+
+.section-testimonial {
+  position: relative;
+  user-select: none;
+  &__blob-left {
+    position: absolute;
+    top: -900px;
+    left: -1500px;
+  }
+  &__blob-right {
+    position: absolute;
+    top: 300px;
+    right: -80px;
+    transform: scale(0.6);
+  }
+  &__wrapper {
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__box {
+    backdrop-filter: blur(53.900001525878906px);
+    box-shadow: 0 4px 43px 0 rgba(0, 0, 0, 0.04);
+    background: rgba(255, 255, 255, 0.36);
+    border-radius: 50px;
+    max-width: 830px;
+    width: 100%;
+    padding: 60px 0 36px 0;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__quotes-top {
+    position: absolute;
+    top: -38px;
+    right: 48px;
+  }
+
+  &__quotes-bottom {
+    position: absolute;
+    bottom: -32px;
+    left: 50px;
+  }
+  @media (max-width: 1024px) {
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__box {
+      max-width: 690px;
+      padding: 45px 0 27px 0;
+    }
+
+    &__quotes-top {
+      right: -20px;
+    }
+
+    &__quotes-bottom {
+      left: -20px;
+    }
+  }
+  @media (max-width: $breakpoint-md) {
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__box {
+      max-width: 517px;
+      margin-bottom: 30px;
+    }
+
+    &__quotes-top {
+      max-width: 77px;
+      right: -15px;
+      top: -30px;
+    }
+
+    &__quotes-bottom {
+      max-width: 77px;
+      left: -15px;
+    }
+
+    &__blob-right {
+      top: auto;
+      bottom: -650px;
+      right: -253px;
+    }
+  }
+  @media (max-width: 415px) {
+    // &__title {
+    //   margin-bottom: 30px;
+    // }
+
+    &__box {
+      max-width: 315px;
+      padding: 40px 0;
+    }
+
+    &__quotes-top {
+      max-width: 61px;
+      right: 21px;
+      top: -16px;
+    }
+
+    &__quotes-bottom {
+      max-width: 61px;
+      left: 20px;
+      bottom: -26px;
+    }
+
+    // &__blob-right {
+    //   top: auto;
+    //   bottom: -650px;
+    //   right: -253px;
+    // }
+  }
+}
+
+.swiper {
+}
+.my-slider {
+  width: 550px;
+
+  &__slide {
+  }
+
+  &__title {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 122%;
+    text-align: center;
+    color: $black-text;
+    margin-bottom: 18px;
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 122%;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 122%;
+    text-align: center;
+  }
+
+  &__pagination {
+    text-align: center;
+  }
+
+  &__button-prev {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $violet;
+    border-radius: 100%;
+    cursor: pointer;
+    svg {
+      margin-right: 2px;
+    }
+  }
+
+  &__button-next {
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $violet;
+    border-radius: 100%;
+    cursor: pointer;
+    svg {
+      margin-left: 2px;
+    }
+  }
+  @media (max-width: 1024px) {
+    &__title {
+      font-size: 28px;
+      margin-bottom: 33px;
+    }
+
+    &__button-prev {
+      display: none;
+    }
+
+    &__button-next {
+      display: none;
+    }
+  }
+
+  @media (max-width: $breakpoint-md) {
+    max-width: 390px;
+    &__title {
+      font-size: 20px;
+      margin-bottom: 29px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+    &__text {
+      font-size: 11px;
+    }
+  }
+  @media (max-width: 670px) {
+    &__button-prev {
+      display: none;
+    }
+
+    &__button-next {
+      display: none;
+    }
+  }
+  @media (max-width: 415px) {
+    max-width: 258px;
+    &__title {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.my-slider__pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: #e2cbfd;
+  transition: all 0.3s;
+}
+
+.my-slider__pagination .swiper-pagination-bullet-active {
+  background-color: $violet;
+  width: 36px;
+  border-radius: 250px;
+}
+
+@media (max-width: $breakpoint-md) {
+  .my-slider__pagination .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+  }
+
+  .my-slider__pagination .swiper-pagination-bullet-active {
+    width: 27px;
+  }
+}

@@ -1,0 +1,23 @@
+// базовые
+@use "modules/base/reset";
+@use "modules/base/variables";
+
+// глобальные
+@use "modules/base/base";
+
+// компоненты
+
+@use "modules/components/buttons";
+// @use "modules/components/custom-swiper";
+@use "modules/components/footer";
+@use "modules/components/header";
+// @use "modules/components/forms";
+// @use "modules/components/input-select";
+
+// секции
+@use "modules/components/hero";
+@use "modules/components/services";
+@use "modules/components/features";
+@use "modules/components/why-us";
+@use "modules/components/testimonial";
+@use "modules/components/fit-for-you";
