@@ -28,7 +28,7 @@
   &__text-box {
     position: absolute;
     top: 50%;
-    transform: translateY(-52%);
+    transform: translateY(-40%);
     color: $black-text;
   }
 
@@ -37,15 +37,20 @@
     font-size: 59px;
     line-height: 100%;
     letter-spacing: -0.03em;
-    max-width: 790px;
-    margin-bottom: 36px;
+    max-width: 580px;
+    margin-bottom: 11px;
   }
 
   &__subtitle {
-    font-weight: 400;
-    font-size: 24px;
+    font-size: 32px;
     line-height: 110%;
     max-width: 385px;
+    margin-bottom: 18px;
+  }
+  &__text {
+    max-width: 523px;
+    font-size: 15px;
+    line-height: 110%;
   }
   @media (max-width: 1024px) {
     &__bg-hand {
@@ -60,17 +65,22 @@
     }
 
     &__text-box {
-      transform: translateY(-52%);
+      // transform: translateY(-52%);
     }
 
     &__title {
-      margin-bottom: 27px;
+      margin-bottom: 19px;
       font-size: 46px;
+      max-width: 532px;
     }
 
     &__subtitle {
       max-width: 261px;
       font-size: 20px;
+    }
+    &__text {
+      max-width: 435px;
+      font-size: 16px;
     }
   }
   @media (max-width: $breakpoint-md) {
@@ -84,16 +94,23 @@
     }
 
     &__text-box {
-      transform: translateY(-60%);
+      transform: translateY(-50%);
     }
 
     &__title {
       font-size: 34px;
-      margin-bottom: 21px;
+      margin-bottom: 10px;
+      max-width: 390px;
     }
 
     &__subtitle {
-      font-size: 14px;
+      font-size: 20px;
+      max-width: 260px;
+      margin-bottom: 10px;
+    }
+    &__text {
+      max-width: 307px;
+      font-size: 15px;
     }
   }
   @media (max-width: 415px) {
@@ -101,38 +118,42 @@
       display: none;
     }
     &__bg-hand--mobill {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      display: none;
     }
     & .container {
       max-width: 100%;
       padding: 0;
     }
     &__wrapper {
-      height: 641px;
+      height: 661px;
       padding-right: 0;
       padding: 32px 0 0 0;
       text-align: center;
-      background-image: url("../assets/images/hero-bg-mobill.png");
+      // border-radius: 0;
+      background-image: url("../assets/images/hero_bg2.png");
+
+      background-position: bottom;
     }
 
     &__text-box {
       transform: translateY(0);
       position: static;
-      max-width: 258px;
+      max-width: 314px;
       margin: 0 auto;
     }
 
     &__title {
       font-size: 32px;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
 
-    // &__subtitle {
-    //   font-size: 14px;
-    // }
+    &__subtitle {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    &__text {
+      font-size: 15px;
+      // max-width: 315px;
+    }
   }
 }

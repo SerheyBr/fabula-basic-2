@@ -4,19 +4,24 @@
   }
 
   &__title {
-    margin-bottom: 55px;
+    margin-bottom: 12px;
   }
-
+  &__subtitle {
+    font-size: 32px;
+    line-height: 110%;
+    text-align: center;
+    max-width: 484px;
+    margin: 0 auto;
+    margin-bottom: 43px;
+  }
   &__columns {
     display: flex;
     gap: 30px;
-    width: max-content;
     margin: 0 auto;
   }
 
   &__item {
-    // width: calc(100% / 3);
-    width: 328px;
+    width: calc(100% / 4);
     height: 251px;
     border: 1px solid $violet;
     border-radius: 20px;
@@ -24,13 +29,7 @@
     align-items: center;
     justify-content: center;
   }
-  &__item--blue {
-    background-color: $violet;
-    color: #fff;
-    & .section-services__item-wrapper {
-      transform: translateY(5px);
-    }
-  }
+
   &__item-wrapper {
     display: flex;
     flex-direction: column;
@@ -50,14 +49,16 @@
     font-size: 24px;
     line-height: 110%;
     text-align: center;
-    max-width: 222px;
+    max-width: 220px;
   }
 
   @media (max-width: 1024px) {
     &__title {
       margin-bottom: 40px;
     }
-
+    &__subtitle {
+      display: none;
+    }
     &__columns {
       gap: 20px;
       width: 100%;
@@ -90,8 +91,8 @@
     }
 
     &__item-title {
-      font-size: 17px;
-      max-width: 146px;
+      font-size: 18px;
+      max-width: 123px;
     }
   }
   @media (max-width: 415px) {
@@ -102,29 +103,18 @@
     &__columns {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 188px 140px;
-      gap: 25px, 20px;
+      grid-auto-rows: 208px;
+      gap: 20px;
     }
 
     &__item {
       width: 100%;
       height: 100%;
       border-radius: 20px;
+    }
 
-      &:nth-child(3) {
-        grid-column: span 2;
-      }
-    }
-    &__item--blue .section-services__item-wrapper {
-      flex-direction: row;
-      gap: 20px;
-    }
-    &__item--blue .section-services__item-title {
-      max-width: 140px;
-      text-align: start;
-    }
     &__item-wrapper {
-      gap: 10px;
+      gap: 15px;
     }
 
     &__item-img {
@@ -134,7 +124,7 @@
 
     &__item-title {
       font-size: 20px;
-      max-width: 100px;
+      max-width: 120px;
     }
   }
 }

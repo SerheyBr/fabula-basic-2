@@ -1,0 +1,120 @@
+@use "../base/variables" as *;
+.accordion {
+  &__wrapper {
+  }
+
+  &__title {
+    margin-bottom: 37px;
+  }
+
+  &__body {
+    max-width: 830px;
+    margin: 0 auto;
+  }
+  @media (max-width: 1024px) {
+    &__body {
+      max-width: 716px;
+    }
+  }
+  @media (max-width: $breakpoint-md) {
+    &__body {
+      max-width: 537px;
+    }
+  }
+}
+
+.accordion-item {
+  margin-bottom: 20px;
+  &__trigger {
+    padding: 20px 30px 20px 20px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    backdrop-filter: blur(53.900001525878906px);
+    box-shadow: 0 4px 43px 0 rgba(0, 0, 0, 0.04);
+    background: rgba(255, 255, 255, 0.36);
+    border-radius: 20px;
+    margin-bottom: 21px;
+  }
+
+  &__status--close {
+    display: none;
+  }
+
+  &__status--open {
+  }
+
+  &__body {
+    padding-right: 30px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-height: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  @media (max-width: 1024px) {
+    //    margin-bottom: 20px;
+    &__trigger {
+      //   padding: 20px 30px 20px 20px;
+      //   font-weight: 400;
+      font-size: 28px;
+      //   line-height: 110%;
+      //   text-align: right;
+      //   display: flex;
+      //   justify-content: space-between;
+      //   cursor: pointer;
+      //   backdrop-filter: blur(53.900001525878906px);
+      //   box-shadow: 0 4px 43px 0 rgba(0, 0, 0, 0.04);
+      //   background: rgba(255, 255, 255, 0.36);
+      //   border-radius: 20px;
+      //   margin-bottom: 21px;
+    }
+
+    // &__status--close {
+    //   display: none;
+    // }
+
+    // &__status--open {
+    // }
+
+    // &__body {
+    //   padding-right: 30px;
+    //   font-size: 20px;
+    //   margin-bottom: 30px;
+    //   max-height: 0;
+    //   opacity: 0;
+    //   position: absolute;
+    //   top: 0;
+    //   z-index: -1;
+    //   transition: all 0.3s;
+    // }
+  }
+  @media (max-width: $breakpoint-md) {
+    &__trigger {
+      padding: 18px 22px 15px 15px;
+      font-size: 21px;
+    }
+    &__body {
+      font-size: 15px;
+    }
+  }
+}
+.accordion-item.active .accordion-item__body {
+  max-height: 500px;
+  opacity: 1;
+  position: static;
+}
+
+.accordion-item.active .accordion-item__status--close {
+  display: block;
+}
+.accordion-item.active .accordion-item__status--open {
+  display: none;
+}

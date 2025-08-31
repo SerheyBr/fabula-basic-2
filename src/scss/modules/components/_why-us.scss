@@ -25,55 +25,61 @@
     line-height: 110%;
     text-align: center;
     color: #fff;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   &__columns {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     gap: 30px;
-    max-width: 1046px;
     margin: 0 auto;
+  }
+  &__column {
+    backdrop-filter: blur(38.099998474121094px);
+    box-shadow: 0 3px 17px 0 rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 35px;
+    padding: 22px;
+    max-width: 411px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__column-img {
+    margin-bottom: 22px;
+  }
+  &__column-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    flex: 1 1 auto;
+    max-width: 330px;
+  }
+  &__column-tag {
+    border-radius: 10px;
+    padding: 14px 8px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 110%;
+    text-align: center;
+    color: $violet;
+    background: rgba(255, 255, 255, 0.94);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    min-height: 72px;
   }
   &__img-big {
     min-width: 0;
     flex: 1 1 auto;
   }
-  &__rows {
-    width: 400px;
-    flex-shrink: 0;
-  }
 
-  &__row {
-    width: 100%;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    padding: 25px 35px;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(153, 153, 153, 0.2) 100%
-    );
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &__row-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  &__row-title {
-    font-size: 24px;
-    line-height: 110%;
-    color: #fff;
-  }
-  &__img--margin {
-    transform: translateY(-4px);
-  }
   @media (max-width: 1024px) {
     &__wrapper {
       padding: 70px 54px;
@@ -81,26 +87,33 @@
 
     &__title {
       font-size: 40px;
-      margin-bottom: 40px;
+      margin-bottom: 33px;
     }
 
     &__columns {
-      gap: 39px;
+      gap: 20px;
     }
-
-    &__rows {
-      width: 316px;
+    &__column {
+      width: 50%;
     }
-
-    &__row {
-      padding: 10px 20px 10px 10px;
+    &__column {
+      backdrop-filter: blur(38.099998474121094px);
+      box-shadow: 0 3px 17px 0 rgba(0, 0, 0, 0.08);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 35px;
+      padding: 22px;
+      max-width: 411px;
+      display: flex;
+      flex-direction: column;
     }
-
-    &__row-wrapper {
-      img {
-        width: 50px;
-        height: 50px;
-      }
+    &__column-img {
+      margin-bottom: 22px;
+    }
+    &__column-title {
+    }
+    &__column-tag {
+      padding: 16px 7px;
+      font-size: 18px;
     }
   }
 
@@ -115,28 +128,30 @@
     }
 
     &__columns {
-      gap: 29px;
-      max-width: 566px;
+      gap: 15px;
+      // max-width: 566px;
     }
-    &__rows {
-      width: 237px;
+    &__column {
+      // backdrop-filter: blur(38.099998474121094px);
+      // box-shadow: 0 3px 17px 0 rgba(0, 0, 0, 0.08);
+      // background: rgba(255, 255, 255, 0.1);
+      // border-radius: 35px;
+      padding: 16px;
+      // max-width: 411px;
+      // display: flex;
+      // flex-direction: column;
     }
-
-    &__row {
-      border-radius: 15px;
-      margin-bottom: 15px;
+    // &__column-img {
+    //   margin-bottom: 22px;
+    // }
+    &__column-title {
+      font-size: 18px;
+      margin-bottom: 14px;
     }
-
-    &__row-wrapper {
-      gap: 10px;
-      img {
-        width: 37px;
-        height: 37px;
-      }
-    }
-
-    &__row-title {
-      font-size: 17px;
+    &__column-tag {
+      padding: 3px 20px;
+      font-size: 15px;
+      min-height: 54px;
     }
   }
   @media (max-width: 415px) {
@@ -155,29 +170,16 @@
 
     &__columns {
       flex-direction: column-reverse;
-      gap: 30px;
+      gap: 25px;
       max-width: 566px;
     }
-    &__rows {
+    &__column {
+      max-width: 100%;
       width: 100%;
-    }
-
-    &__row {
-      border-radius: 15px;
-      margin-bottom: 15px;
-      padding: 22px 30px 22px 0;
-    }
-
-    &__row-wrapper {
-      gap: 25px;
-      img {
-        width: 54px;
-        height: 54px;
-      }
-    }
-
-    &__row-title {
-      font-size: 20px;
+      border-radius: 19px;
+      backdrop-filter: blur(28.57499885559082px);
+      box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.08);
+      background: rgba(255, 255, 255, 0.1);
     }
   }
 }

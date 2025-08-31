@@ -51,6 +51,11 @@ function copyLibs() {
   return src("src/assets/libs/**/*.*").pipe(dest("dist/assets/libs"));
 }
 
+// копируем шрифты
+function copyFonts() {
+  return src("src/assets/fonts/**/*.*").pipe(dest("dist/assets/fonts"));
+}
+
 // отслеживание изменений в файлах
 function watching() {
   watch(["src/scss/**/*.scss"], styles); //отслеживаем изменения в  scss и запускаем скрипт
@@ -92,6 +97,6 @@ exports.watching = watching;
 exports.browsersync = browsersync;
 exports.html = html;
 // exports.copyImg = copyImg;
-exports.build = series(cleanDist, building, copyImg, copyLibs);
+exports.build = series(cleanDist, building, copyImg, copyLibs, copyFonts);
 
 exports.default = parallel(styles, scripts, browsersync, html, watching);
